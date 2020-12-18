@@ -1,8 +1,11 @@
+import React from "react";
+import Layout from "../components/Layout";
+import Page from "../components/Page";
+
 const Index = () => (
-    <div>
-        <h1>Technical-Assignment</h1>
-        <p>welcome</p>
-    </div>
-)
+  <Page title="This is Assignment-1">
+    <Layout />
+  </Page>
+);
 
 export default Index;
