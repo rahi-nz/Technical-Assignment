@@ -1,6 +1,7 @@
 import React from "react";
 import App from "next/app";
 import Head from "next/head";
+import "../styles/globals.css";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 export interface ITheme {

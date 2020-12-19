@@ -4,4 +4,5 @@ export interface Prop {
   header?: string;
   name?: string;
   date?: string;
+  color?: string;
 }
