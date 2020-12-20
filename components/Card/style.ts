@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 340px;
   padding: 20px;
+  margin: auto;
   margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -40,4 +41,7 @@ export const Name = styled.p`
   justify-content: center;
   color: #fff;
 `;
-export const Date = styled.div``;
+export const Date = styled.div`
+  color: ${(props) => props.theme.color};
+  font-size: 14px;
+`;

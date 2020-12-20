@@ -18,6 +18,7 @@ export const Header = styled.section`
 
 export const Content = styled.section`
   display: flex;
+  flex-direction: column;
   height: 100%;
   overflow: auto;
   background: #f7f8f9;
@@ -49,6 +50,11 @@ export const Board = styled.div`
   color: #2b2e47;
   width: 33%;
   min-width: 360px;
+  margin: auto;
+`;
+
+export const BoardContainer = styled.div`
+  display: flex;
 `;
 
 export const Title = styled.div`
@@ -56,4 +62,13 @@ export const Title = styled.div`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+  margin-top: 10px;
+  min-width: 370px;
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
 `;

@@ -3,12 +3,36 @@ import { ThemeProvider } from "styled-components";
 import { Container, Title, Description, Details, Name, Date } from "./style";
 import { Prop } from "./type";
 
-const Card = ({ title, description, name, date, color }: Prop) => {
-  const bgTheme = { bgColor: color };
-  const dateColor = { bgColor: color };
+const Card = ({
+  title,
+  description,
+  name,
+  date,
+  color,
+  isPast,
+  state,
+}: Prop) => {
+  const dateColor = () => {
+    if (state === "Done") {
+      return "#d4d8df";
+    }
+    switch (isPast) {
+      case "Yes":
+        return "#f25464";
+      case "No":
+        return "#5fdc7d";
+      default:
+        return "#9d6cff";
+    }
+  };
+
+  const theme = {
+    bgColor: color,
+    color: dateColor(),
+  };
 
   return (
-    <ThemeProvider theme={bgTheme}>
+    <ThemeProvider theme={theme}>
       <Container>
         <Title>{title}</Title>
         <Description>{description}</Description>

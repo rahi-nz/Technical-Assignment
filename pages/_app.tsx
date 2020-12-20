@@ -1,8 +1,10 @@
 import React from "react";
 import App from "next/app";
 import Head from "next/head";
-import "../styles/globals.css";
+import withRedux from "next-redux-wrapper";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+import configureStore from "../store/store";
+import "../styles/globals.css";
 
 export interface ITheme {
   color: string;
@@ -23,7 +25,7 @@ const GlobalStyle = createGlobalStyle<IThemeWrapper>`
   }
 `;
 
-export default class MyApp extends App {
+class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
 
@@ -41,3 +43,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+export default withRedux(configureStore)(MyApp);

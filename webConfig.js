@@ -1,5 +1,6 @@
 module.exports = {
   name: "technical-assignment",
+  launchpadID: "5e9e4502f5090995de566f86",
   content: [
     {
       status: "backlog",
@@ -17,7 +18,7 @@ module.exports = {
       name: "LE",
       color: "#c335fb",
       date: "Two days ago",
-      isPast: true,
+      isPast: "Yes",
     },
     {
       status: "backlog",
@@ -26,7 +27,6 @@ module.exports = {
         "JavaScript has a concurrency model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.",
       name: "ME",
       color: "#35cdfb",
-      date: "",
     },
     {
       status: "todo",
@@ -36,6 +36,7 @@ module.exports = {
       name: "AM",
       color: "#915aff",
       date: "Today",
+      isPast: "Today",
     },
     {
       status: "todo",
@@ -45,6 +46,7 @@ module.exports = {
       name: "OZ",
       color: "#3591fb",
       date: "In three days",
+      isPast: "No",
     },
     {
       status: "todo",
@@ -54,6 +56,7 @@ module.exports = {
       name: "LE",
       color: "#c335fb",
       date: "July 21",
+      isPast: "No",
     },
     {
       status: "done",
@@ -63,6 +66,7 @@ module.exports = {
       name: "LE",
       color: "#c335fb",
       date: "A week ago",
+      isPast: "Yes",
     },
     {
       status: "done",
@@ -72,6 +76,7 @@ module.exports = {
       name: "OZ",
       color: "#3591fb",
       date: "Last Tuesday",
+      isPast: "Yes",
     },
     {
       status: "done",

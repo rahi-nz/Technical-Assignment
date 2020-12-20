@@ -10,6 +10,8 @@ import {
   Divider,
   Board,
   Title,
+  TitleContainer,
+  BoardContainer,
 } from "./style";
 import SearchInput from "../SearchInput";
 import Card from "../Card";
@@ -28,51 +30,61 @@ const Layout = () => (
       </User>
     </Header>
     <Content>
-      <Board>
+      <TitleContainer>
         <Title>Backlog</Title>
-        {content
-          .filter((el) => el.status === "backlog")
-          .map((el) => (
-            <Card
-              key={el.title}
-              description={el.description}
-              title={el.title}
-              color={el.color}
-              name={el.name}
-              date={el.date}
-            />
-          ))}
-      </Board>
-      <Board>
         <Title>Todo</Title>
-        {content
-          .filter((el) => el.status === "todo")
-          .map((el) => (
-            <Card
-              key={el.title}
-              description={el.description}
-              title={el.title}
-              color={el.color}
-              name={el.name}
-              date={el.date}
-            />
-          ))}
-      </Board>
-      <Board>
         <Title>Done</Title>
-        {content
-          .filter((el) => el.status === "done")
-          .map((el) => (
-            <Card
-              key={el.title}
-              description={el.description}
-              title={el.title}
-              color={el.color}
-              name={el.name}
-              date={el.date}
-            />
-          ))}
-      </Board>
+      </TitleContainer>
+      <BoardContainer>
+        <Board>
+          {content
+            .filter((el) => el.status === "backlog")
+            .map((el) => (
+              <Card
+                key={el.title}
+                description={el.description}
+                title={el.title}
+                color={el.color}
+                name={el.name}
+                date={el.date}
+                isPast={el.isPast}
+                state="Backlog"
+              />
+            ))}
+        </Board>
+        <Board>
+          {content
+            .filter((el) => el.status === "todo")
+            .map((el) => (
+              <Card
+                key={el.title}
+                description={el.description}
+                title={el.title}
+                color={el.color}
+                name={el.name}
+                date={el.date}
+                isPast={el.isPast}
+                state="Todo"
+              />
+            ))}
+        </Board>
+        <Board>
+          {content
+            .filter((el) => el.status === "done")
+            .map((el) => (
+              <Card
+                key={el.title}
+                description={el.description}
+                title={el.title}
+                color={el.color}
+                name={el.name}
+                date={el.date}
+                isPast={el.isPast}
+                state="Done"
+              />
+            ))}
+        </Board>
+      </BoardContainer>
     </Content>
   </Container>
 );

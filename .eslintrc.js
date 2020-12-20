@@ -35,5 +35,6 @@ module.exports = {
     "jsx-a11y/label-has-associated-control": "off",
     "react/no-unescaped-entities": "off",
     "jsx-a11y/accessible-emoji": "off",
+    camelcase: "off",
   },
 };
