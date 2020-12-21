@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Satellites /> Should render correctly 1`] = `
+<div
+  className="style__Container-c44run-0 fHyyLp"
+>
+  <h3>
+    Satellites
+  </h3>
+  <div
+    className="style__Lists-c44run-1 cUWyEV"
+  />
+</div>
+`;
