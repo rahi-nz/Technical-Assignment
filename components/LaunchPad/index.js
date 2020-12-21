@@ -15,6 +15,7 @@ const LaunchPad = () => {
       const response = await request.get(getLaunchpad(launchpadID));
       if (response.ok) {
         const launches = await getLaunchesData(response.data.launches);
+        console.log("response", launches);
         const failedLaunch = failedLaunches(response.data.name, launches);
         setFailed(failedLaunch);
       }

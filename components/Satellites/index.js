@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Container, Lists } from "./style";
 import { getSatellitesAction } from "../../store/getSatellites/getSatellitesAction";
 import { launchedDate } from "../../utils";
@@ -7,26 +7,21 @@ import { launchedDate } from "../../utils";
 const Satellites = () => {
   const dispatch = useDispatch();
   const [satellites, setSatellites] = useState();
-  const satellitesList = useSelector((state) => state.satellites.data);
 
   useEffect(() => {
     (async () => {
-      await dispatch(getSatellitesAction());
+      const res = await dispatch(getSatellitesAction());
+      setSatellites(
+        launchedDate(
+          res.map((el) => ({
+            id: el.id,
+            date: el.spaceTrack.LAUNCH_DATE,
+          }))
+        )
+      );
     })();
     }, []); // eslint-disable-line
 
-  useEffect(() => {
-    setSatellites(
-      launchedDate(
-        satellitesList.map((el) => ({
-          id: el.id,
-          date: el.spaceTrack.LAUNCH_DATE,
-        }))
-      )
-    );
-    }, [satellitesList]); // eslint-disable-line
-
-  console.log("satellites", satellites);
   return (
     <Container>
       <h3>Satellites</h3>

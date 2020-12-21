@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LaunchPad /> Should render correctly 1`] = `
+<section
+  className="style__Container-sc-1hovddl-0 enkUkG"
+>
+  <h3>
+    FailedLaunches
+  </h3>
+</section>
+`;

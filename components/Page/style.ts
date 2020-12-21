@@ -16,6 +16,4 @@ export const Container = styled.section`
   }
 `;
 
-export const Element = styled.section`
-  text-align: center;
-`;
+export const Element = styled.section``;
